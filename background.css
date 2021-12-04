@@ -1,0 +1,57 @@
+/* main background */
+.main .main__bg {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main .main__bg .bg__greet h5 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-weight: bolder;
+}
+
+.main .main__bg .bg__greet h5:nth-child(2) {
+    color: var(--secondary-color);
+}
+
+.main .main__bg .bg__qoute {
+    margin-left: 5rem;
+    color: var(--gray-color);
+    position: relative;
+}
+.main .main__bg .bg__qoute p {
+    font-family: Poppins, sans-serif;
+}
+
+.main .main__bg .bg__qoute::after {
+    content: "";
+    left: 0;
+    top: -20px;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    background-color: var(--gray-color);
+}
+
+/* main background */
+
+@media screen and (max-width: 680px) {
+    .main .main__bg .bg__greet h5 {
+        font-size: 2rem;
+    }
+
+    .main .main__bg {
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main .main__bg .bg__qoute {
+        display: none;
+    }
+}

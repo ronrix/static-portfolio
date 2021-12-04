@@ -1,0 +1,92 @@
+.hobbies h4 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.hobbies__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hobbies .img__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 320px;
+    max-height: 300px;
+    padding: 2rem;
+    background-color: var(--wrapper-color);
+    transition: all 200ms ease-in-out;
+}
+
+.hobbies .img__wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--wrapper-color);
+    transition: all 200ms ease-in-out;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.hobbies .img__wrapper:hover::after {
+    transform: scale(1.2);
+}
+
+.hobbies .img__wrapper img {
+    width: 300px;
+}
+
+.hobbies .hobby:nth-child(even) {
+    align-content: self-end;
+}
+
+.hobbies .hobby {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.hobbies .hobby p {
+    font-family: Poppins, sans-serif;
+    max-width: 200px;
+    color: var(--gray-color);
+}
+
+.hobbies .hobby p span {
+    color: var(--default-black);
+    font-weight: bolder;
+}
+
+.hobbies .hobby h4 {
+    display: block;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 680px) {
+    .hobbies h4 {
+        font-size: 1.5rem;
+    }
+
+    .hobbies {
+        position: relative;
+    }
+    .hobbies .hobby {
+        flex-direction: column;
+    }
+
+    .hobbies .basketball p {
+        order: 2;
+    }
+
+    .hobbies .anime p {
+        order: 2;
+    }
+}
