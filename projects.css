@@ -79,3 +79,12 @@
         margin-bottom: 2rem;
     }
 }
+
+@media screen and (max-width: 430px) {
+    .projects {
+        padding: 1rem;
+    }
+    .projects .project__wrapper a h3 {
+        font-size: 0.7rem;
+    }
+}
