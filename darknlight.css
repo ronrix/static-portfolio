@@ -56,6 +56,7 @@ h4.dnl,
 .lighty.dnl,
 .icons.dnl,
 .icons a i.dnl,
-.info.dnl {
+.info.dnl,
+.about {
     color: var(--default-white) !important;
 }
