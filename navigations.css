@@ -48,7 +48,7 @@
     .main .main__nav ul li {
         display: none;
     }
-    .main .main__nav ul li:nth-child(3) {
+    .main .main__nav ul li:nth-child(4) {
         display: block;
     }
     .main .main__nav ul li:nth-child(3) a {
