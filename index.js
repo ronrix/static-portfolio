@@ -50,6 +50,18 @@ const h4 = document.querySelectorAll("h4");
 const info = document.querySelectorAll(".info");
 const circle = document.querySelector(".darknlight .circle");
 
+// render the saved theme
+if (localStorage.getItem("theme") == "dark") {
+    circle.classList.add("toggle");
+    dnl.classList.add("bg");
+    document.body.classList.add("dnl");
+    icons.forEach((el) => el.classList.add("dnl"));
+    icon2.forEach((el) => el.classList.add("dnl"));
+    lighty.forEach((el) => el.classList.add("dnl"));
+    h4.forEach((el) => el.classList.add("dnl"));
+    info.forEach((el) => el.classList.add("dnl"));
+}
+
 dnl.addEventListener("click", () => {
     circle.classList.toggle("toggle");
     dnl.classList.toggle("bg");
@@ -59,4 +71,11 @@ dnl.addEventListener("click", () => {
     lighty.forEach((el) => el.classList.toggle("dnl"));
     h4.forEach((el) => el.classList.toggle("dnl"));
     info.forEach((el) => el.classList.toggle("dnl"));
+
+    // save and store the theme to local storage
+    if (circle.classList.contains("toggle")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
 });
