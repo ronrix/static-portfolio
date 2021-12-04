@@ -8,8 +8,8 @@
     justify-content: space-between;
 }
 
-.main .main__nav ul li:nth-child(2) {
-    margin-left: -300px;
+.main .main__nav ul li:nth-child(3) {
+    margin-right: 300px;
 }
 
 .main .main__nav ul li {

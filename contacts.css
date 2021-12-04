@@ -53,6 +53,19 @@
     color: var(--default-white);
 }
 
+.contacts .animate {
+    animation: animate 1s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 @media screen and (max-width: 680px) {
     .contacts .contact__wrapper {
         flex-direction: column;
