@@ -19,6 +19,10 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: montserrat, Poppins, sans-serif;
     background-color: var(--default-white);
