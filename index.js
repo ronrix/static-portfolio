@@ -50,12 +50,11 @@ const h4 = document.querySelectorAll("h4");
 const info = document.querySelectorAll(".info");
 const about = document.querySelector(".about");
 const aboutp = document.querySelector(".about p");
-const circle = document.querySelector(".darknlight .circle");
+const sun = document.querySelector(".darknlight i");
 
 // render the saved theme
 if (localStorage.getItem("theme") == "dark") {
-    circle.classList.add("toggle");
-    dnl.classList.add("bg");
+    dnl.classList.add("moon");
     document.body.classList.add("dnl");
     icons.forEach((el) => el.classList.add("dnl"));
     icon2.forEach((el) => el.classList.add("dnl"));
@@ -64,11 +63,31 @@ if (localStorage.getItem("theme") == "dark") {
     info.forEach((el) => el.classList.add("dnl"));
     about.classList.add("dnl");
     aboutp.classList.add("dnl");
+
+    if (dnl.classList.contains("moon")) {
+        
+        // change icon for dark
+        sun.classList.remove('fa-moon');
+        sun.classList.remove('moon');
+        sun.classList.add('fa-sun');
+        sun.classList.add('sun');
+
+        localStorage.setItem("theme", "dark");
+    } else {
+
+        // change icon for light
+        sun.classList.remove('fa-sun');
+        sun.classList.remove('sun');
+        sun.classList.add('fa-moon');
+        sun.classList.add('moon');
+
+        localStorage.setItem("theme", "light");
+    }
 }
 
 dnl.addEventListener("click", () => {
-    circle.classList.toggle("toggle");
-    dnl.classList.toggle("bg");
+    dnl.classList.toggle("moon");
+
     document.body.classList.toggle("dnl");
     icons.forEach((el) => el.classList.toggle("dnl"));
     icon2.forEach((el) => el.classList.toggle("dnl"));
@@ -79,9 +98,23 @@ dnl.addEventListener("click", () => {
     aboutp.classList.toggle("dnl");
 
     // save and store the theme to local storage
-    if (circle.classList.contains("toggle")) {
+    if (dnl.classList.contains("moon")) {
+        
+        // change icon for dark
+        sun.classList.remove('fa-moon');
+        sun.classList.remove('moon');
+        sun.classList.add('fa-sun');
+        sun.classList.add('sun');
+
         localStorage.setItem("theme", "dark");
     } else {
+
+        // change icon for light
+        sun.classList.remove('fa-sun');
+        sun.classList.remove('sun');
+        sun.classList.add('fa-moon');
+        sun.classList.add('moon');
+
         localStorage.setItem("theme", "light");
     }
 });

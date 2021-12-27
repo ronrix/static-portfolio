@@ -2,49 +2,34 @@
     position: fixed;
     right: 0;
     top: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 100px;
-    height: 30px;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
     background-color: var(--default-black);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
-    padding-left: 0.2rem;
     cursor: pointer;
     z-index: 1000;
 }
 
 .darknlight i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--default-white);
     transition: all 200ms ease-in-out;
 }
-.darknlight i:nth-child(2) {
-    font-size: 1.5rem;
+
+.darknlight.moon {
+    background-color: var(--default-white);
+}
+
+.darknlight > i.sun {
     color: #dbdb00;
 }
 
-.darknlight .border {
-    width: 100%;
-    position: absolute;
-}
-
-.darknlight .border .circle {
-    background-color: var(--secondary-color);
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    transform: translateX(54px);
-    transition: all 400ms ease-in-out;
-}
-
-.darknlight .border .circle.toggle {
-    transform: translateX(0);
-}
-.darknlight.bg {
-    background-color: var(--default-white);
+.darknlight > i.moon {
+    color: #fff;
 }
 
 body.dnl {
